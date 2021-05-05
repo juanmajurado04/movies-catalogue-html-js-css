@@ -1,0 +1,307 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  height: 100%;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 46px;
+}
+
+.loading {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.loading span {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  background-color: #2b2b2b;
+  display: inline-block;
+  border-radius: 50%;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  50% {
+    opacity: 0%;
+    transform: scale(0.7) translateY(10px);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #2b2b2b;
+  width: 100%;
+  height: 90px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header a h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #6AC045;
+  padding-left: 16px;
+}
+
+header .search-bar-container {
+  padding-right: 64px;
+  padding-left: 16px;
+  align-items: center;
+}
+
+header .search-bar {
+  display: flex;
+  align-items: center;
+  padding-right: 32px;
+  width: 160px;
+  border: solid 2px #656565;
+  border-radius: 8px;
+}
+
+header .search-bar img {
+  width: 16px;
+  padding-left: 6px;
+}
+
+header .search-textbox {
+  border: none;
+  outline: none;
+  color: #707070;
+  background-color: #2b2b2b;
+  padding-left: 16px;
+  width: 150px;
+  height: 25px;
+}
+
+header .search-bar button {
+  display: none;
+}
+
+.ul-container {
+  padding: 64px 32px 0 32px;
+}
+
+.ul-container .movies-container {
+  margin-bottom: 0;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, 250px);
+  padding: 0;
+  justify-content: center;
+  gap: 16px 64px;
+}
+
+.movies-container div {
+  text-align: start;
+  
+}
+
+.ul-container .movies-container .movie-home img{
+  width: 100%;
+  border: solid 4px #ebebeb;
+  border-radius: 4px;
+}
+
+.ul-container .movies-container .movie-home img:hover {
+  animation-name: blur;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes blur {
+  100% {
+    border-color: #6AC045;
+  }
+}
+
+.movie-home h4 {
+  font-family: 'Lato', sans-serif;
+  color: #e3e3e3;
+  font-size: large;
+  margin: 0;
+}
+
+.movie-home h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Lato', sans-serif;
+  color: #c2c2c2;
+  font-size: medium;
+}
+
+.movie-detail-container {
+  padding-top: 5%;
+  margin-bottom: 74px;
+}
+
+.movie-detail{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 32px 64px;
+  color: #e3e3e3;
+  font-family: 'Lato', sans-serif;
+}
+
+.movie-detail img {
+  max-width: 250px;
+  padding: 0;
+  border: solid #ebebeb 4px;
+  border-radius: 4px;
+}
+
+.movie-detail .info {
+  max-width: 900px;
+}
+
+.movie-detail .info h1 {
+  margin-top: 0;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.movie-detail .info h3 {
+  margin-top: 0px;
+  margin-bottom: 12px;
+  padding-left: 5px;
+}
+
+.movie-detail .info h4 {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  padding-left: 5px;
+}
+
+.movie-detail .info h5 {
+  font-size: 15px;
+}
+
+.line {
+  border-top: solid 1px #ebebeb;
+}
+
+h1 { 
+  text-align: center;
+  color: #e3e3e3;
+  font-family: 'Lato', sans-serif;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  color: #e3e3e3;
+  font-family: 'Lato', sans-serif;
+}
+
+.suggestions .suggestion-items {
+  width: 300px;
+  align-content: center;
+  text-align: center;
+}
+
+.suggestions img {
+  max-width: 250px;
+  padding: 0;
+  border: solid #ebebeb 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.suggestions img:hover {
+  animation-name: blur;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.suggestions h1 {
+  font-size: 32px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 46px;  
+  width: 100%;
+  display: flex;
+  border-top: solid 1px #707070;
+  align-items: center;
+}
+
+footer .footer-content {
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+footer img{
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+
+footer .instagram-logo{
+  filter: invert() saturate(0);
+}
+
+footer .github-logo {
+  filter:  invert();
+}
+
+
+@media (max-width: 612px) {
+  
+  .movie-detail-container {
+    justify-content: center;
+  }
+
+  .movie-detail {
+    justify-content: center;
+  }
+
+  header {
+    height: 110px;
+  }
+
+  footer {
+    position: relative;
+  }
+}
